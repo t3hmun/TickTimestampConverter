@@ -14,6 +14,8 @@
         {
             var text = uxInsertTimestamp.Text;
             long number;
+            //Do not try converting the tick timestamp to double.
+            //Double cannot accurately handle numbers that large.
             var success = long.TryParse(text, out number);
             if (success)
             {
